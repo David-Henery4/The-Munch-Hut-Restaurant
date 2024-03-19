@@ -11,6 +11,7 @@ module.exports = {
       black: "#000000",
       gold: "#CC7800",
       red: "#CC2626",
+      redHover: "#FE4A51",
     },
     gridTemplateColumns: {
       mob: "24px repeat(10,1fr) 24px",
@@ -21,6 +22,9 @@ module.exports = {
     fontFamily: {
       poppins: ["var(--font-poppins)"],
       pompiere: ["var(--font-pompiere)"],
+    },
+    backgroundImage: {
+      "hero-pattern": "url('/images/home-header/table-of-food.jpg')",
     },
     extend: {
       backgroundImage: {

@@ -1,7 +1,9 @@
+import { Header } from "@/components/home";
+
 export default function Home() {
   return (
-    <main className="grid-cols-mob">
-      <h1>Hello</h1>
+    <main className="w-full grid-cols-mob">
+      <Header/>
     </main>
   );
 }
