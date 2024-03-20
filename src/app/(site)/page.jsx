@@ -1,4 +1,4 @@
-import { Header, AboutUs, MenuInfoSection } from "@/components/home";
+import { Header, AboutUs, MenuInfoSection, WeeklySpecials } from "@/components/home";
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <Header/>
       <AboutUs/>
       <MenuInfoSection/>
+      <WeeklySpecials/>
     </main>
   );
 }

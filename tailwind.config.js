@@ -20,6 +20,7 @@ module.exports = {
       // lap: "105px repeat(10,1fr) 105px",
       desk: "140px repeat(10,1fr) 140px",
       basic12: "repeat(12, 1fr)",
+      flexible: "repeat(auto-fit, minmax(100px, 1fr))",
     },
     fontFamily: {
       poppins: ["var(--font-poppins)"],
