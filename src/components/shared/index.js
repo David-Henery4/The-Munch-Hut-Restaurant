@@ -4,6 +4,7 @@ import MenuLink from "./MenuLink";
 import BookLink from "./BookLink";
 import BodyText from "./BodyText";
 import SecondaryHeader from "./SecondaryHeader";
+import ThirdHeader from "./ThirdHeader";
 
 export {
   Navbar,
@@ -11,5 +12,6 @@ export {
   BookLink,
   MenuLink,
   BodyText,
-  SecondaryHeader
+  SecondaryHeader,
+  ThirdHeader,
 }

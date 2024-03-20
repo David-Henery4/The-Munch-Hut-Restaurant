@@ -17,7 +17,7 @@ const AboutText = () => {
           there&apos;s something for everyone.
         </BodyText>
         <BodyText>
-          Our team is lives for crafting meals that tantalize the taste buds,
+          In the heart of London, our team lives for crafting meals that tantalize the taste buds,
           leaving every guest satisfied. Come dine with us and experience an
           adventure that celebrates the art of great food.
         </BodyText>
