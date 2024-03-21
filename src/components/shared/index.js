@@ -6,6 +6,7 @@ import BodyText from "./BodyText";
 import SecondaryHeader from "./SecondaryHeader";
 import ThirdHeader from "./ThirdHeader";
 import FourthHeader from "./FourthHeader";
+import Cta from "./Cta";
 
 export {
   Navbar,
@@ -16,4 +17,5 @@ export {
   SecondaryHeader,
   ThirdHeader,
   FourthHeader,
+  Cta,
 }

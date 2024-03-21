@@ -5,6 +5,7 @@ import {
   WeeklySpecials,
   SpecialOffers,
 } from "@/components/home";
+import { Cta } from "@/components/shared";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <MenuInfoSection />
       <WeeklySpecials />
       <SpecialOffers />
+      <Cta/>
     </main>
   );
 }
