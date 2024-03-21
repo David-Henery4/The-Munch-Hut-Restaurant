@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     screens: {
       smTab: "45em", // 720px
+      lap: "64em", // 1024px
     },
     colors: {
       white: "#FFFFFF",

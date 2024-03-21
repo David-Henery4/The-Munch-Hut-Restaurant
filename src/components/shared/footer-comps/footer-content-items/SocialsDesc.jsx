@@ -9,8 +9,8 @@ import {
 
 const SocialsDesc = () => {
   return (
-    <div className="smTab:col-start-2 smTab:col-end-7">
-      <div className="max-w-80 mx-auto">
+    <div className="smTab:col-start-2 smTab:col-end-7 lap:col-start-1 lap:col-end-4 lap:row-start-2 lap:row-end-4">
+      <div className="max-w-80 mx-auto smTab:mr-auto smTab:ml-0">
         <BodyText>
           Summarize your business so the visitor can learn about your offerings
           from any page on your website.
