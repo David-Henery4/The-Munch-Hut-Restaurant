@@ -6,6 +6,7 @@ import BodyText from "./BodyText";
 import SecondaryHeader from "./SecondaryHeader";
 import ThirdHeader from "./ThirdHeader";
 import FourthHeader from "./FourthHeader";
+import FifthHeader from "./FifthHeader";
 import Cta from "./Cta";
 
 export {
@@ -18,4 +19,5 @@ export {
   ThirdHeader,
   FourthHeader,
   Cta,
+  FifthHeader,
 }

@@ -1,9 +1,13 @@
-
+import { FooterContent, BottomBar } from "./footer-comps"
 
 const Footer = () => {
   return (
-    <footer>
-      Footer
+    <footer className="w-full">
+
+      <FooterContent/>
+
+      <BottomBar/>
+
     </footer>
   )
 }
