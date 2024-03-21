@@ -11,7 +11,7 @@ const SpecialsCard = () => {
         className="h-64 w-full object-cover object-center"
       />
       <div>
-        <h4>Product Title</h4>
+        <h4 className="text-lg font-semibold">Product Title</h4>
         <p>$ 20.00</p>
       </div>
     </div>
