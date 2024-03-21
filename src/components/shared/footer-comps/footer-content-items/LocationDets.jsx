@@ -2,7 +2,7 @@ import { FifthHeader, BodyText } from "../..";
 
 const LocationDets = () => {
   return (
-    <div>
+    <div className="smTab:col-start-7 smTab:col-end-12">
       <FifthHeader>Location</FifthHeader>
       <div className="mt-4">
         <BodyText>Email: contact@mysite.com</BodyText>

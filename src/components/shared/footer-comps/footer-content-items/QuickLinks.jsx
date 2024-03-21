@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const QuickLinks = () => {
   return (
-    <div>
+    <div className="smTab:col-start-2 smTab:col-end-7">
       <FifthHeader>Quick Links</FifthHeader>
       <ul className="grid gap-2 mt-4">
         {navLinks.map((linkInfo) => {

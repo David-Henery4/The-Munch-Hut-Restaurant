@@ -9,19 +9,18 @@ import {
 
 const FooterContent = () => {
   return (
-    <div className="px-6 pt-12 pb-6 text-center grid gap-8">
+    <div className="px-6 pt-12 pb-6 text-center grid gap-8 smTab:grid-cols-basic12 smTab:text-left smTab:gap-y-16 smTab:gap-x-12">
       <LogoTitle />
 
-      <SocialsDesc/>
+      <SocialsDesc />
 
-      <QuickLinks/>
+      <QuickLinks />
 
-      <ContactDets/>
+      <ContactDets />
 
-      <LocationDets/>
+      <LocationDets />
 
-      <FooterMapContainer/>
-
+      <FooterMapContainer />
     </div>
   );
 };

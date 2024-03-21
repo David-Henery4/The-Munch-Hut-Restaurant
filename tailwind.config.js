@@ -6,6 +6,9 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      smTab: "45em", // 720px
+    },
     colors: {
       white: "#FFFFFF",
       black: "#000000",
