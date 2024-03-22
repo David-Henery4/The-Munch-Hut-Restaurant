@@ -11,6 +11,7 @@ module.exports = {
       XtraSmTab: "38.75em", // 620px
       smTab: "45em", // 720px
       tab: "47.5em", // 760px
+      smLap: "57.5em", // 920px
       lap: "64em", // 1024px
     },
     colors: {
