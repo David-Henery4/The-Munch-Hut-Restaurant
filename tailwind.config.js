@@ -26,6 +26,7 @@ module.exports = {
       desk: "140px repeat(10,1fr) 140px",
       basic12: "repeat(12, 1fr)",
       flexible: "repeat(auto-fit, minmax(100px, 1fr))",
+      flexibleMedium: "repeat(auto-fit, minmax(125px, 1fr))",
     },
     fontFamily: {
       poppins: ["var(--font-poppins)"],
