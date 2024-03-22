@@ -4,7 +4,7 @@ import Link from "next/link";
 const AboutText = () => {
   return (
     <div>
-      <div className="max-w-64 mx-auto">
+      <div className="max-w-64 mx-auto lgMob:max-w-[350px]">
         <SecondaryHeader>
           A little bit about the <span className="text-red">Munch Hut</span>
         </SecondaryHeader>

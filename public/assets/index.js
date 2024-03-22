@@ -5,6 +5,8 @@ import TwitterIcon from "./twitter-icon.svg";
 import PinterestIcon from "./pinterest-icon.svg";
 import InstagramIcon from "./instagram-icon.svg";
 import YoutubeIcon from "./youtube-icon.svg";
+import ChevDownIcon from "./chev-down.svg"
+import BookingIcon from "./booking-icon.svg"
 
 export {
   BurgerIcon,
@@ -14,4 +16,6 @@ export {
   PinterestIcon,
   TwitterIcon,
   YoutubeIcon,
+  ChevDownIcon,
+  BookingIcon,
 };
