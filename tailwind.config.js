@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     screens: {
+      lgMob: "26.25em", // 420px
       smTab: "45em", // 720px
       lap: "64em", // 1024px
     },

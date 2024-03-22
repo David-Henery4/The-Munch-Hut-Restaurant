@@ -4,9 +4,11 @@ import Link from "next/link";
 const AboutText = () => {
   return (
     <div>
-      <SecondaryHeader>
-        A little bit about the <span className="text-red">Munch Hut</span>
-      </SecondaryHeader>
+      <div className="max-w-64 mx-auto">
+        <SecondaryHeader>
+          A little bit about the <span className="text-red">Munch Hut</span>
+        </SecondaryHeader>
+      </div>
 
       <div className="mt-6">
         <BodyText>
@@ -17,9 +19,10 @@ const AboutText = () => {
           there&apos;s something for everyone.
         </BodyText>
         <BodyText>
-          In the heart of London, our team lives for crafting meals that tantalize the taste buds,
-          leaving every guest satisfied. Come dine with us and experience an
-          adventure that celebrates the art of great food.
+          In the heart of London, our team lives for crafting meals that
+          tantalize the taste buds, leaving every guest satisfied. Come dine
+          with us and experience an adventure that celebrates the art of great
+          food.
         </BodyText>
       </div>
 

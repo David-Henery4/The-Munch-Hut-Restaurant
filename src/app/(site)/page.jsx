@@ -9,7 +9,7 @@ import { Cta } from "@/components/shared";
 
 export default function Home() {
   return (
-    <main className="w-full grid grid-cols-mob">
+    <main className="w-full grid grid-cols-mob lgMob:grid-cols-tab">
       <Header />
       <AboutUs />
       <MenuInfoSection />
