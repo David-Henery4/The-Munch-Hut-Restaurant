@@ -14,7 +14,7 @@ const Slider = () => {
           className="h-full object-cover object-center"
         />
       </div>
-      <div className="col-start-2 col-end-12 row-start-12 row-end-13 my-4 flex items-center justify-center gap-2">
+      <div className="col-start-2 col-end-12 row-start-12 row-end-13 mt-4 mb-16 flex items-center justify-center gap-2 lgMob:mb-24">
         <div className="w-6 h-6 rounded-full bg-red border-4 border-black"/>
         <div className="w-6 h-6 rounded-full bg-white border-4 border-black"/>
         <div className="w-6 h-6 rounded-full bg-white border-4 border-black"/>

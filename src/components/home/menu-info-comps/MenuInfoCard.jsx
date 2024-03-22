@@ -1,9 +1,9 @@
 import { ThirdHeader, BodyText, MenuLink } from "@/components/shared";
 
 const MenuInfoCard = () => {
-  // console.log("menu-card")
+  // console.log("menu-card") lgMob:mt-24
   return (
-    <div className="col-start-2 col-end-12 row-start-2 row-end-11 text-center z-10 mt-16 px-4 py-8 rounded-2xl bg-black/80">
+    <div className="col-start-2 col-end-12 row-start-2 row-end-11 text-center z-10 mt-16 px-4 py-8 rounded-2xl bg-black/80 lgMob:mt-24">
       <ThirdHeader>Check out our menu</ThirdHeader>
       <div className="grid justify-items-center gap-6 mt-9">
         <BodyText>

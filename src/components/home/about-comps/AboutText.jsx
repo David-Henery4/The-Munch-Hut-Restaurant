@@ -10,7 +10,7 @@ const AboutText = () => {
         </SecondaryHeader>
       </div>
 
-      <div className="mt-6">
+      <div className="mt-6 grid gap-4 max-w-[425px] mx-auto">
         <BodyText>
           Welcome to The Munch Hut, where culinary excellence and fine dinning
           at the heart of everything we do. We pride ourselves on offering a

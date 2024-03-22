@@ -1,4 +1,3 @@
-import { SecondaryHeader } from "../..";
 import { LogoIcon } from "../../../../../public/assets";
 
 const LogoTitle = () => {
@@ -8,7 +7,7 @@ const LogoTitle = () => {
         <LogoIcon />
       </div>
       <div className="lap:flex-[3]">
-        <SecondaryHeader>The Munch Hut</SecondaryHeader>
+        <h6 className="text-5xl font-pompiere lgMob:text-6xl lap:text-3xl">The Munch Hut</h6>
       </div>
     </div>
   );

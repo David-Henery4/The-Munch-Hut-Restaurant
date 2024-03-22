@@ -2,12 +2,11 @@ import { AboutText, AboutImgGrid } from "./about-comps";
 
 const AboutUs = () => {
   return (
-    <section className="col-start-2 col-end-12 text-center py-12 flex flex-col gap-10">
-      <AboutText/>
+    <section className="col-start-2 col-end-12 text-center py-16 flex flex-col gap-10 lgMob:py-24">
+      <AboutText />
       {/****/}
 
-      <AboutImgGrid/>
-
+      <AboutImgGrid />
     </section>
   );
 };
