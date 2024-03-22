@@ -2,13 +2,13 @@ import Image from "next/image"
 
 const AboutImgGrid = () => {
   return (
-    <div className="grid grid-cols-basic12">
+    <div className="grid grid-cols-basic12 tab:flex-1">
       <Image
         src="/images/home-about/restaurant-empty.jpg"
         width={260}
         height={260}
         alt="A modern, bright, empty restaurant"
-        className="col-start-2 col-end-8 row-start-1 row-end-4 w-32 h-32 object-cover z-10 rounded-full border-gold border-8"
+        className="col-start-2 col-end-8 row-start-1 row-end-4 w-32 h-32 object-cover z-10 rounded-full border-gold border-8 tab:col-start-8 tab:col-end-13"
       />
       <Image
         src="/images/home-about/empty-bar.jpg"
@@ -22,7 +22,7 @@ const AboutImgGrid = () => {
         width={390}
         height={390}
         alt="Four delicious meals around a circle table, shown from above"
-        className="w-full h-52 col-start-6 col-end-13 row-start-8 row-end-13 object-cover border-l-8 border-b-8 border-l-gold border-b-gold"
+        className="w-full h-52 col-start-6 col-end-13 row-start-8 row-end-13 object-cover border-l-8 border-b-8 border-l-gold border-b-gold tab:col-start-2 tab:col-end-9 tab:row-start-7 tab:row-end-13"
       />
     </div>
   );

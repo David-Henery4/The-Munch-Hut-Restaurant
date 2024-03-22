@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const AboutText = () => {
   return (
-    <div>
-      <div className="max-w-64 mx-auto lgMob:max-w-[350px]">
+    <div className="tab:flex-1">
+      <div className="max-w-64 mx-auto lgMob:max-w-[350px] tab:ml-0">
         <SecondaryHeader>
           A little bit about the <span className="text-red">Munch Hut</span>
         </SecondaryHeader>
@@ -28,7 +28,7 @@ const AboutText = () => {
 
       <Link
         href="/about"
-        className="mt-8 py-2 w-32 bg-red inline-block rounded-md"
+        className="mt-8 py-2 w-32 bg-red inline-block rounded-md tab:text-center"
       >
         Our Story
       </Link>
