@@ -8,6 +8,7 @@ import ThirdHeader from "./ThirdHeader";
 import FourthHeader from "./FourthHeader";
 import FifthHeader from "./FifthHeader";
 import Cta from "./Cta";
+import PrimaryHeader from "./PrimaryHeader";
 
 export {
   Navbar,
@@ -20,4 +21,5 @@ export {
   FourthHeader,
   Cta,
   FifthHeader,
+  PrimaryHeader,
 }
