@@ -4,8 +4,8 @@ import { FourthHeader } from "@/components/shared";
 const OffersCard = () => {
   return (
     <div className="w-full flex  bg-red even:bg-gold even:flex-row-reverse group smTab:max-h-[275px]">
-      <div className="w-full px-6 py-9 text-left flex flex-[2] justify-start items-center lgMob:pl-10 lgMob:pr-4 group-even:lgMob:pr-10 group-even:lgMob:pl-4">
-        <div className="max-w-[300px] mx-auto">
+      <div className="w-full px-6 py-9 text-left flex flex-[2] justify-start items-center lgMob:pl-10 lgMob:pr-4 group-even:lgMob:pr-10 group-even:lgMob:pl-4 lgLap:pl-[105px] group-even:lgLap:pr-[105px] desk:pl-[140px] group-even:desk:pr-[140px]">
+        <div className="max-w-[300px] mx-auto lgDesk:mr-0 group-even:lgDesk:ml-0">
           <FourthHeader>Buy one get one free cocktails fridays</FourthHeader>
         </div>
       </div>

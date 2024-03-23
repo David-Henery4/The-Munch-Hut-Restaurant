@@ -9,7 +9,7 @@ import {
 
 const FooterContent = () => {
   return (
-    <div className="px-6 pt-16 pb-10 text-center grid gap-8 smTab:grid-cols-basic12 lgMob:px-10 lgMob:pt-24 lgMob:pb-16 smTab:text-left smTab:gap-y-16 smTab:gap-x-12 lap:gap-x-4 lap:gap-y-8 smLap:pt-32 smLap:pb-20 ">
+    <div className="px-6 pt-16 pb-10 text-center grid gap-8 max-w-[1440px] mx-auto smTab:grid-cols-basic12 lgMob:px-10 smTab:text-left smTab:gap-y-16 smTab:gap-x-12 lap:gap-x-4 lap:gap-y-8 lap:pt-20 lap:pb-14 lgLap:px-[105px] desk:px-[140px]">
       <LogoTitle />
 
       <SocialsDesc />

@@ -13,6 +13,10 @@ module.exports = {
       tab: "47.5em", // 760px
       smLap: "57.5em", // 920px
       lap: "64em", // 1024px
+      lgLap: "70.25em", // 1124px
+      smDesk: "72.5em", // 1160px
+      desk: "80em", // 1280px
+      lgDesk: "90em", // 1440px
     },
     colors: {
       white: "#FFFFFF",
@@ -25,7 +29,7 @@ module.exports = {
     gridTemplateColumns: {
       mob: "24px repeat(10,1fr) 24px",
       tab: "40px repeat(10,1fr) 40px",
-      // lap: "105px repeat(10,1fr) 105px",
+      lap: "105px repeat(10,1fr) 105px",
       desk: "140px repeat(10,1fr) 140px",
       basic12: "repeat(12, 1fr)",
       flexible: "repeat(auto-fit, minmax(100px, 1fr))",

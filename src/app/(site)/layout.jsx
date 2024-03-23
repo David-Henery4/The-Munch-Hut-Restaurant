@@ -7,7 +7,7 @@ export const metadata = metadataInfo
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${pompiere.variable}`}>
+    <html lang="en" className={`${poppins.variable} ${pompiere.variable} scroll-smooth`}>
       <body className="bg-black text-white font-poppins">
         <Navbar/>
         {children}
