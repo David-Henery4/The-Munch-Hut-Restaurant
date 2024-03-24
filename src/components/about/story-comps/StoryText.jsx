@@ -8,7 +8,7 @@ const StoryText = () => {
           Our <span className="text-red">Story</span>
         </PrimaryHeader>
       </div>
-      <div className="mt-6 grid gap-4">
+      <div className="mt-8 grid gap-6 max-w-[472px] mx-auto desk:mt-12">
         <BodyText>
           Lorem ipsum dolor sit amet consectetur. Vitae orci laoreet risus
           convallis diam fringilla non eget fermentum. Luctus adipiscing nibh
