@@ -9,11 +9,9 @@ const Sidebar = ({isSidebarOpen, setIsSidebarOpen}) => {
     >
       <HeaderIcons
         setIsSidebarOpen={setIsSidebarOpen}
-        isSidebarOpen={isSidebarOpen}
       />
       <LinkList
         setIsSidebarOpen={setIsSidebarOpen}
-        isSidebarOpen={isSidebarOpen}
       />
     </aside>
   );

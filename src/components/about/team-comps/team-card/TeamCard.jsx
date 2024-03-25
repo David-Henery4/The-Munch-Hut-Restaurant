@@ -16,7 +16,7 @@ const TeamCard = () => {
       {/* Might have to make smaller */}
       <ThirdHeader>Bryan Machado</ThirdHeader>
       <p>Chef</p>
-      <p className="line-clamp-3">
+      <p>
         Duis sed ut dolor viverra porttitor semper et faucibus facilisis. Hac
         maecenas rhoncus.
       </p>
