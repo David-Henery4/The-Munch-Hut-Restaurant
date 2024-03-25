@@ -9,6 +9,7 @@ import FourthHeader from "./FourthHeader";
 import FifthHeader from "./FifthHeader";
 import Cta from "./Cta";
 import PrimaryHeader from "./PrimaryHeader";
+import Sidebar from "./Sidebar";
 
 export {
   Navbar,
@@ -22,4 +23,5 @@ export {
   Cta,
   FifthHeader,
   PrimaryHeader,
+  Sidebar
 }

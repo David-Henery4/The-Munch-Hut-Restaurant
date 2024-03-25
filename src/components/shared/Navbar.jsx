@@ -1,5 +1,6 @@
 import { BurgerIcon, LogoIcon } from "../../../public/assets";
-import { NavList, BookingBtn} from "./navbar-comps";
+import { NavList, BookingBtn, BurgerAndSidebar} from "./navbar-comps";
+
 
 const Navbar = () => {
   return (
@@ -9,7 +10,7 @@ const Navbar = () => {
       </div>
       <NavList />
       <BookingBtn />
-      <BurgerIcon className="cursor-pointer tab:hidden" />
+      <BurgerAndSidebar/>
     </nav>
   );
 };

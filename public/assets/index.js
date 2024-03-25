@@ -7,6 +7,7 @@ import InstagramIcon from "./instagram-icon.svg";
 import YoutubeIcon from "./youtube-icon.svg";
 import ChevDownIcon from "./chev-down.svg"
 import BookingIcon from "./booking-icon.svg"
+import CloseIcon from "./close-icon.svg"
 
 export {
   BurgerIcon,
@@ -18,4 +19,5 @@ export {
   YoutubeIcon,
   ChevDownIcon,
   BookingIcon,
+  CloseIcon
 };
