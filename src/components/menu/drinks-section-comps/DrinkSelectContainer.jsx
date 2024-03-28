@@ -8,7 +8,7 @@ import {
 
 const DrinkSelectContainer = () => {
   return (
-    <div className="relative flex justify-center items-center mt-10">
+    <div className="relative flex justify-center items-center smTab:hidden">
       <Select>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Cocktails" />

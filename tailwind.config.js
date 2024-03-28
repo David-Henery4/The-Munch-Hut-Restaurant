@@ -36,6 +36,8 @@ module.exports = {
       flexibleMedium: "repeat(auto-fit, minmax(125px, 1fr))",
       teamGridColsTab: "1fr 1fr",
       teamGridColsLap: "repeat(4, 1fr)",
+      drinksContainerTab: "1fr 30%",
+      drinksCardsContainerTab: "repeat(auto-fit, minmax(250px, 1fr))",
     },
     fontFamily: {
       poppins: ["var(--font-poppins)"],
