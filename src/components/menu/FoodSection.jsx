@@ -3,15 +3,14 @@ import { MenuItemsContainer, SelectContainer } from "./food-section-comps";
 
 const FoodSection = () => {
   return (
-    <section className="col-start-2 col-end-12 py-14 text-center">
+    <section className="col-start-2 col-end-12 py-14 text-center smTab:py-28">
       <SecondaryHeader>
         We have something for <span className="text-red">everyone</span>
       </SecondaryHeader>
-      
-      <SelectContainer/>
 
-      <MenuItemsContainer/>
-      
+      <SelectContainer />
+
+      <MenuItemsContainer />
     </section>
   );
 }
