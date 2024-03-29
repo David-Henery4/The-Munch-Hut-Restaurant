@@ -8,6 +8,10 @@ import YoutubeIcon from "./youtube-icon.svg";
 import ChevDownIcon from "./chev-down.svg"
 import BookingIcon from "./booking-icon.svg"
 import CloseIcon from "./close-icon.svg"
+import EmailIcon from "./email-icon.svg"
+import LocationPinIcon from "./location-pin-icon.svg"
+import PhoneIcon from "./phone-icon.svg"
+import GridIcon from "./grid-icon.svg"
 
 export {
   BurgerIcon,
@@ -19,5 +23,9 @@ export {
   YoutubeIcon,
   ChevDownIcon,
   BookingIcon,
-  CloseIcon
+  CloseIcon,
+  EmailIcon,
+  LocationPinIcon,
+  PhoneIcon,
+  GridIcon,
 };
