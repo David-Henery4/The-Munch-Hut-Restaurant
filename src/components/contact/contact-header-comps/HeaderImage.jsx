@@ -10,6 +10,7 @@ const HeaderImage = () => {
         src="/images/contact/tower-bridge.jpg"
         alt="London's tower bridge with a red and pink sunset in the background"
         className="w-full h-full object-cover"
+        priority={true}
       />
     </div>
   );
