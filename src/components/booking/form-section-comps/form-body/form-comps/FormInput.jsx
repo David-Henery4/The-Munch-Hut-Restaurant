@@ -1,22 +1,24 @@
 
 
-const FormInput = ({label, id, name, value, isMessage = false}) => {
+const FormInput = ({label, id, name, value, isMessage = false, className = ""}) => {
 
   //
   if (isMessage){
     return (
-      <div className="w-full">
-        <label htmlFor={id} className="">{label}</label>
+      <div className="w-full XtraSmTab:flex XtraSmTab:flex-col XtraSmTab:items-start XtraSmTab:row-span-2 XtraSmTab:col-start-2 XtraSmTab:col-end-3">
+        <label htmlFor={id} className="">
+          {label}
+        </label>
         <textarea
           name={name}
           id={id}
-          className="resize-none w-full h-48 p-3 mt-2 rounded-md bg-black/0 outline-none border border-white/50"
+          className="resize-none w-full h-48 p-3 mt-2 rounded-md bg-black/0 outline-none border border-white/50 XtraSmTab:flex-[1]"
         ></textarea>
       </div>
     );
   }
   return (
-    <div className="w-full">
+    <div className={`w-full ${className}`}>
       <label htmlFor={id} className="">
         {label}
       </label>
