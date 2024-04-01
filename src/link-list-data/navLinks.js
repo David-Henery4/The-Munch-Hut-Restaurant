@@ -5,6 +5,7 @@ const navLinks = [
   { id: 4, label: "Menu", route: "/menu" },
   { id: 5, label: "Events", route: "/events" },
   { id: 6, label: "Contact", route: "/contact" },
+  { id: 7, label: "Gallery", route: "/gallery" },
 ];
 
 export default navLinks;
