@@ -10,20 +10,19 @@ const about = defineType({
 
   fields: [
     defineField({
-      title: "About Paragraph",
-      name: "homeAboutText",
+      readOnly: true,
+      title: "Home About Paragraph Field",
+      name: "homeAbout",
+      type: "string",
+      initialValue: "About Paragraph (Home Page)",
+    }),
+    defineField({
+      title: "Home About Paragraph",
+      name: "homeAboutParagraph",
       type: "text",
       description:
         "A short paragraph to be displayed in the about section, on the home page.",
-      placeholder:
-        "A short paragraph to be displayed in the about section, on the home page.",
     }),
-    defineField({
-      readOnly: true,
-      title : "About Paragraph",
-      name: "homeAbout",
-      type: "string"
-    })
   ],
 });
 
