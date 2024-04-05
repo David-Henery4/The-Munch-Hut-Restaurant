@@ -23,32 +23,23 @@ export default defineConfig({
       icon: LogoIcon,
       structure: (S) =>
         S.list()
-          .title("Base")
+          .title("base")
           .items([
-            S.listItem().title("Settings").child(S.list().title("Settings Documents").items([
-              S.listItem()
-                .title("Site Settings")
-                .child(
-                  S.document()
-                    .schemaType("siteSettings")
-                    .documentId("siteSettings")
-                ),
-              S.listItem()
-                .title("Main Navigation")
-                .child(
-                  S.document()
-                    .schemaType("mainNavigation")
-                    .documentId("mainNavigation")
-                ),
-              S.listItem()
-                .title("Colors")
-                .child(S.document().schemaType("colors").documentId("colors")),
-            ])),
+            S.listItem()
+              .title("Main Menu")
+              .child(
+                S.list()
+                  .title("Main Menu Documents")
+                  .items([
+                    S.documentTypeListItem("food"),
+                    S.documentTypeListItem("drink"),
+                    S.documentTypeListItem("weeklySpecial"),
+                  ])
+              ),
+            S.divider(),
             ...S.documentTypeListItems().filter(
               (listItem) =>
-                !["siteSettings", "mainNavigation", "colors"].includes(
-                  listItem.getId()
-                )
+                !["food", "drink", "weeklySpecial"].includes(listItem.getId())
             ),
           ]),
     }),
