@@ -1,9 +1,7 @@
 import MenuItemsContainer from "./MenuItemsContainer";
-import SelectContainer from "./SelectContainer";
-import FoodCategoriesContainer from "./FoodCategoriesContainer";
+import FoodMenuCategories from "./FoodMenuCategories";
 
 export {
   MenuItemsContainer,
-  SelectContainer,
-  FoodCategoriesContainer,
+  FoodMenuCategories,
 }

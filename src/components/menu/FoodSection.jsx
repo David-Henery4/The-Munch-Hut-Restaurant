@@ -1,5 +1,5 @@
 import { SecondaryHeader } from "../shared"
-import { MenuItemsContainer, SelectContainer, FoodCategoriesContainer } from "./food-section-comps";
+import { MenuItemsContainer, FoodMenuCategories } from "./food-section-comps";
 
 const placeholderMenuCategories = [
   {
@@ -101,11 +101,9 @@ const FoodSection = () => {
         We have something for <span className="text-red">everyone</span>
       </SecondaryHeader>
 
-      <SelectContainer
-        placeholderMenuCategories={placeholderMenuCategories}
+      <FoodMenuCategories
+        placeholderMenuCategories={ placeholderMenuCategories }
       />
-
-      <FoodCategoriesContainer/>
 
       <MenuItemsContainer />
     </section>
