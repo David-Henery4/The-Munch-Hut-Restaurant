@@ -10,7 +10,7 @@ const DrinksSection = () => {
     <section className="w-full col-start-2 col-end-12 max-w-[1160px] mx-auto pt-7 pb-14 text-center smTab:pt-14 smTab:pb-28">
       <SecondaryHeader>Drinks</SecondaryHeader>
 
-      <div className="mt-12 w-full smTab:grid smTab:grid-cols-drinksContainerTab smTab:items-center smTab:gap-[68px] smTab:justify-between">
+      <div className="mt-12 w-full smTab:grid smTab:grid-cols-drinksContainerTab smTab:items-start smTab:gap-[68px] smTab:justify-between">
         <DrinkSelectContainer />
 
         <DrinkCategoriesContainer />

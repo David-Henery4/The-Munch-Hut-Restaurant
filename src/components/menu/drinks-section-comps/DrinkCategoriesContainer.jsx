@@ -44,7 +44,7 @@ const DrinkCategoriesContainer = () => {
         return (
           <button
             key={cat.id}
-            className={`w-full p-6 pl-0 border-b text-left hover:text-gold hover:border-gold ${
+            className={`w-full p-6 pl-0 border-b text-left hover:text-gold hover:border-gold first:pt-0 ${
               cat.isActive ? "border-b-red text-red" : "border-b-white"
             }`}
           >
