@@ -1,4 +1,4 @@
-import { SelectContainer, FoodCategoriesContainer } from "./food-cat-comps"
+import { SelectContainer, FoodCategoriesContainer } from "./food-cat-comps";
 import { client } from "../../../../sanity/lib/client";
 const placeholderMenuCategories = [
   {
@@ -93,17 +93,20 @@ const placeholderMenuCategories = [
   },
 ];
 
-const FoodMenuCategories = async () => {
+const FoodMenuCategories = async ({ currentFoodCategory }) => {
   const foodCategoriesList = await client.fetch(
     "array::unique(*[_type == 'food']{...category->{FoodCategoryName}}[].FoodCategoryName)"
   );
-  console.log(foodCategoriesList)
+  console.log(foodCategoriesList);
   return (
     <>
       <SelectContainer placeholderMenuCategories={placeholderMenuCategories} />
-      <FoodCategoriesContainer />
+      <FoodCategoriesContainer
+        foodCategoriesList={foodCategoriesList}
+        currentFoodCategory={currentFoodCategory}
+      />
     </>
   );
 };
 
-export default FoodMenuCategories
+export default FoodMenuCategories;

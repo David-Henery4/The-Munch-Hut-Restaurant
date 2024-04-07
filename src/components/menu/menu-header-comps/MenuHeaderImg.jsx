@@ -10,6 +10,7 @@ const MenuHeaderImg = () => {
         src="/images/menu/menu-header-img.png"
         alt="header for the menu page, showcasing one of our fine pizzas"
         className="w-full h-full object-cover object-center"
+        priority={true}
       />
     </div>
   );
