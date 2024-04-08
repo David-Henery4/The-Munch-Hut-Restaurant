@@ -1,9 +1,10 @@
 import Link from "next/link";
-
+import handleSetSearchParams from "@/helpers/handleSetSearchParams";
 
 const FoodCategoriesContainer = ({
   foodCategoriesList,
   currentFoodCategory,
+  currentDrinkCategory,
 }) => {
   const currentCategory =
     currentFoodCategory === null ? "Starters" : currentFoodCategory;
@@ -13,15 +14,19 @@ const FoodCategoriesContainer = ({
       {foodCategoriesList.map((cat, i) => {
         return (
           <Link
-            href={{
-              query: {
-                foodCat: `${cat}`,
+            href={handleSetSearchParams(
+              {
+                currentName: "drinkCat",
+                currentValue: currentDrinkCategory,
               },
-            }}
+              { newName: "foodCat", newValue: `${cat}` }
+            )}
             key={i}
             replace
             scroll={false}
-            className={`${cat === currentCategory  ? "border-b border-b-red" : null}`} // temp removed
+            className={`${
+              cat === currentCategory ? "border-b border-b-red" : null
+            }`} // temp removed
           >
             {cat}
           </Link>

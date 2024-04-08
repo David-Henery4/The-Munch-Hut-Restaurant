@@ -1,9 +1,7 @@
-import DrinkSelectContainer from "./DrinkSelectContainer";
+import DrinkMenuCategories from "./DrinkMenuCategories";
 import DrinkItemsContainer from "./DrinkItemsContainer";
-import DrinkCategoriesContainer from "./DrinkCategoriesContainer";
 
 export {
   DrinkItemsContainer,
-  DrinkSelectContainer,
-  DrinkCategoriesContainer,
+  DrinkMenuCategories
 }

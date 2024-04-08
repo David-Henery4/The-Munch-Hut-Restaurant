@@ -2,7 +2,10 @@ import { SelectContainer, FoodCategoriesContainer } from "./food-cat-comps";
 import { client } from "../../../../sanity/lib/client";
 
 
-const FoodMenuCategories = async ({ currentFoodCategory }) => {
+const FoodMenuCategories = async ({
+  currentFoodCategory,
+  currentDrinkCategory,
+}) => {
   const foodCategoriesList = await client.fetch(
     "array::unique(*[_type == 'food']{...category->{FoodCategoryName}}[].FoodCategoryName)"
   );
@@ -16,6 +19,7 @@ const FoodMenuCategories = async ({ currentFoodCategory }) => {
       <FoodCategoriesContainer
         foodCategoriesList={foodCategoriesList}
         currentFoodCategory={currentFoodCategory}
+        currentDrinkCategory={currentDrinkCategory}
       />
     </>
   );

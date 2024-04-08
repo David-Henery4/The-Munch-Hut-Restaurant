@@ -26,8 +26,9 @@ const MenuItemsContainer = async ({ currentFoodCategory }) => {
         return (
           <MenuItemCard
             key={foodItems?._id}
-            {...foodItems}
-            currentCategory={currentCategory}
+            itemName={foodItems?.foodName}
+            itemDescription={foodItems?.foodDescription}
+            // currentCategory={currentCategory}
           />
         );
       })}
