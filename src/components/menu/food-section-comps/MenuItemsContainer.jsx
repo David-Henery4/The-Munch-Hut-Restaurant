@@ -18,7 +18,7 @@ const MenuItemsContainer = async ({ currentFoodCategory }) => {
     }
   );
   revalidateTag("currentFoodCategoryItems");
-  console.log(currentFoodCategoryItems)
+  // console.log(currentFoodCategoryItems)
   //
   return (
     <div className="mt-12 flex flex-wrap justify-center items-start gap-8 pt-12 border-t border-t-gold">

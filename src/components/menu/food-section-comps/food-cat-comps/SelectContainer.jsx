@@ -1,3 +1,4 @@
+"use client";
 import {
   Select,
   SelectContent,
@@ -5,24 +6,38 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/shared/shad-comps/SelectComp";
+// import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-const SelectContainer = ({ placeholderMenuCategories }) => {
+const SelectContainer = ({ foodCategoriesList, currentFoodCategory }) => {
+  const router = useRouter();
+  const currentCategory =
+    currentFoodCategory === null ? "Starters" : currentFoodCategory;
+  //
+  const handleSearchParams = (e) => {
+    router.replace(`?foodCat=${e}`, { scroll: false });
+    return e
+  };
   //
   return (
     <div className="relative flex justify-center items-center mt-12  smTab:hidden">
-      <Select>
+      <Select
+        value={currentCategory}
+        onValueChange={handleSearchParams}
+        defaultValue={currentCategory}
+      >
         <SelectTrigger className="w-[180px]">
-          <SelectValue placeholder="Starters" />
+          <SelectValue placeholder={currentCategory} />
         </SelectTrigger>
         <SelectContent className="overflow-y-auto bg-black">
-          {placeholderMenuCategories.map((category) => {
+          {foodCategoriesList.map((category, i) => {
             return (
               <SelectItem
-                key={category?.id}
-                value={category?.category}
+                key={i}
+                value={category}
                 className="hover:cursor-pointer hover:bg-white hover:text-black"
               >
-                {category?.label}
+                <p>{category}</p>
               </SelectItem>
             );
           })}
@@ -32,4 +47,4 @@ const SelectContainer = ({ placeholderMenuCategories }) => {
   );
 };
 
-export default SelectContainer
+export default SelectContainer;
