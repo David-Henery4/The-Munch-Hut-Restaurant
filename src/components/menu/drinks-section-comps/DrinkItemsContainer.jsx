@@ -4,6 +4,7 @@ import { revalidateTag } from "next/cache";
 
 const DrinkItemsContainer = async ({ currentDrinkCategory }) => {
   // "Tea & Coffee" = might have to change not secure enough
+  // Maybe call whole array & select the first item for default
   const currentCategory =
     currentDrinkCategory === null ? "Tea & Coffee" : currentDrinkCategory;
   //

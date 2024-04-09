@@ -1,3 +1,6 @@
+
+// Used on the server-side with the "Link Component"
+
 const handleSetSearchParams = (
   currentSearchParams = { currentName: "cat-one", currentValue: null },
   newSearchParams = { newName: "cat-two", newValue: null }

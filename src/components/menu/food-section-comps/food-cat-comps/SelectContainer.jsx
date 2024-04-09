@@ -6,24 +6,20 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/shared/shad-comps/SelectComp";
-// import Link from "next/link";
-import { useRouter } from "next/navigation";
+import useHandleSearchParams from "@/hooks/useHandleSearchParams";
 
 const SelectContainer = ({ foodCategoriesList, currentFoodCategory }) => {
-  const router = useRouter();
+  const { handleSearchParams } = useHandleSearchParams();
   const currentCategory =
     currentFoodCategory === null ? "Starters" : currentFoodCategory;
-  //
-  const handleSearchParams = (e) => {
-    router.replace(`?foodCat=${e}`, { scroll: false });
-    return e
-  };
   //
   return (
     <div className="relative flex justify-center items-center mt-12  smTab:hidden">
       <Select
         value={currentCategory}
-        onValueChange={handleSearchParams}
+        onValueChange={(e) =>
+          handleSearchParams({ catName: "foodCat", catValue: e }, "drinkCat")
+        }
         defaultValue={currentCategory}
       >
         <SelectTrigger className="w-[180px]">

@@ -5,10 +5,13 @@ const DrinkMenuCategories = async ({ currentDrinkCategory, currentFoodCategory }
   const drinkCategoriesList = await client.fetch(
     "array::unique(*[_type == 'drink']{...category->{drinkCategoryName}}[].drinkCategoryName)"
   );
-  console.log(drinkCategoriesList)
+  // console.log(drinkCategoriesList)
   return (
     <>
-      <DrinkSelectContainer />
+      <DrinkSelectContainer
+        currentDrinkCategory={currentDrinkCategory}
+        drinkCategoriesList={drinkCategoriesList}
+      />
       <DrinkCategoriesContainer
         currentFoodCategory={currentFoodCategory}
         currentDrinkCategory={currentDrinkCategory}
