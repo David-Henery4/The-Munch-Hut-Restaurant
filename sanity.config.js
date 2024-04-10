@@ -37,9 +37,30 @@ export default defineConfig({
                   ])
               ),
             S.divider(),
+            S.listItem()
+              .title("Menu Description (Home)")
+              .child(
+                S.document()
+                  .schemaType("homeMenuDescription")
+                  .documentId("homeMenuDescription")
+              ),
+            S.listItem()
+              .title("About Us (Home)")
+              .child(
+                S.document()
+                  .schemaType("aboutUsHomePage")
+                  .documentId("aboutUsHomePage")
+              ),
+            S.divider(),
             ...S.documentTypeListItems().filter(
               (listItem) =>
-                !["food", "drink", "weeklySpecial"].includes(listItem.getId())
+                ![
+                  "food",
+                  "drink",
+                  "weeklySpecial",
+                  "homeMenuDescription",
+                  "aboutUsHomePage",
+                ].includes(listItem.getId())
             ),
           ]),
     }),

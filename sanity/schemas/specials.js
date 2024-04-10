@@ -1,5 +1,7 @@
 import { defineType, defineField } from "sanity";
 
+// Will need Images
+
 const specials = defineType({
   title: "Weekly Special",
   name: "weeklySpecial",
@@ -15,6 +17,11 @@ const specials = defineType({
       name: "foodDescription",
       type: "text",
     }),
+    defineField({
+      title: "Food Image",
+      name: "foodImage",
+      type: "image",
+    })
   ],
 });
 

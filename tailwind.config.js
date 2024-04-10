@@ -20,6 +20,7 @@ module.exports = {
     },
     colors: {
       white: "#FFFFFF",
+      offWhite: "#F3F5F8",
       black: "#000000",
       blackHover: "#141414",
       gold: "#CC7800",
@@ -53,8 +54,8 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       maxWidth: {
-        maxSectionWidth: "1110px"
-      }
+        maxSectionWidth: "1110px",
+      },
     },
   },
   plugins: [],

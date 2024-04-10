@@ -4,7 +4,6 @@ import {
 } from "./drinks-section-comps";
 import { SecondaryHeader } from "../shared";
 
-// *[_type == "drink" ]{...category->{drinkCategoryName}}[].drinkCategoryName
 
 const DrinksSection = ({ currentFoodCategory, currentDrinkCategory }) => {
   return (
