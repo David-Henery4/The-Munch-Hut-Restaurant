@@ -8,6 +8,8 @@ const CardContainer = async () => {
     {},
     { next: { tags: ["weeklySpecialsList"] } }
   );
+  revalidateTag("weeklySpecialsList");
+  //
   console.log(weeklySpecialsList)
   //
   return (
