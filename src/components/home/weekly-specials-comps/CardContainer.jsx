@@ -10,8 +10,6 @@ const CardContainer = async () => {
   );
   revalidateTag("weeklySpecialsList");
   //
-  console.log(weeklySpecialsList)
-  //
   return (
     <div className="grid grid-cols-flexible gap-9 mt-16 lgMob:grid-cols-flexibleMedium">
       {weeklySpecialsList.map((foodItem) => {
