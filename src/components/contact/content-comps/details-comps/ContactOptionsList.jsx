@@ -1,22 +1,37 @@
 import ContactOptionCard from "./contactOptionCard.jsx/ContactOptionCard";
 import placeholderContactList from "@/contact-details-list/placeholderContactList";
+import { client } from "../../../../../sanity/lib/client";
+import { revalidateTag } from "next/cache";
 
-const ContactOptionsList = ({isBookingPage= false}) => {
+const ContactOptionsList = async ({isBookingPage= false}) => {
+  const contactInformationData = await client.fetch(
+    "*[_type == 'contactInformation'][0]{email, phoneNumber, social}",
+    {},
+    { next: { tags: ["contactInformationData"] } }
+  );
+  revalidateTag("contactInformationData");
+  //
+  console.log(contactInformationData)
+  const contactInfoRay = Object.entries(contactInformationData);
+  console.log(contactInfoRay)
+  //
   return (
     <ul
-      className={`w-full flex flex-wrap justify-center gap-8 smLap:justify-start smLap:flex-col smLap:flex-nowrap smLap:flex-[1] smLap:gap-12 ${
-        isBookingPage ? "smLap:items-center" : ""
+      className={`w-full grid justify-center gap-8 smTab:grid-cols-contactOptionTab smLap:grid-cols-contactOptionLap smLap:flex-[1] smLap:gap-12 ${
+        isBookingPage
+          ? "smLap:items-center smLap:justify-center"
+          : "smLap:justify-start"
       }`}
     >
-      {placeholderContactList.map((contactOption) => {
-        const isValueArray = typeof contactOption.value !== "string";
+      {Object.entries(contactInformationData).map((contactOption, i) => {
+        const key = contactOption[0];
+        const value = contactOption[1];
+        const isValueArray = typeof value !== "string";
         return (
-          <li
-            key={contactOption.id}
-            className="flex justify-start items-start gap-6"
-          >
+          <li key={i} className="flex justify-start items-start gap-6">
             <ContactOptionCard
-              contactOption={contactOption}
+              name={key}
+              value={value}
               isValueArray={isValueArray}
             />
           </li>

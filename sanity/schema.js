@@ -8,6 +8,7 @@ import food from "./schemas/food";
 import specials from "./schemas/specials";
 import homeMenuDescription from "./schemas/homeMenuDescription";
 import offers from "./schemas/offers";
+import contact from "./schemas/contact";
 
 export const schema = {
   types: [
@@ -20,6 +21,7 @@ export const schema = {
     drink,
     food,
     specials,
-    offers
+    offers,
+    contact
   ],
 };

@@ -1,29 +1,43 @@
 import { BodyText } from "@/components/shared";
+// import { Icon} from "@iconify/react";
+import Link from "next/link";
+import { PhoneIcon, EmailIcon, GridIcon } from "../../../../../../public/assets";
+import { IconContainer } from "@/components/shared";
 
-const ContactOptionCard = ({ contactOption, isValueArray = false }) => {
+const ContactOptionCard = ({ name, value, isValueArray = false }) => {
+  //
+  const label =
+    name === "email" ? "Email" : name === "phoneNumber" ? "Phone" : "Socials";
+  const icons =
+    name === "email" ? <EmailIcon className="h-full w-full"/> : name === "phoneNumber" ? <PhoneIcon className="h-full w-full"/> : <GridIcon className="h-full w-full"/>;
   //
   return (
     <>
       <div className="p-3 rounded-full grid place-items-center bg-red">
         <div className="w-6 h-6">
-          <contactOption.icon className="h-full w-full" />
+          {icons}
         </div>
       </div>
       {/**/}
       <div>
-        <h3 className="text-2xl">{contactOption.label}</h3>
+        <h3 className="text-2xl">{label}</h3>
         {isValueArray ? (
           <div className="flex justify-start items-center gap-1 mt-2">
-            {contactOption.value.map((valueIcon, i) => (
-              <div key={i} className="w-6 h-6">
-                <valueIcon.icon className="w-full h-full fill-white" />
-              </div>
-            ))}
+            {value.map((valueIcon, i) => {
+              return (
+                <div key={i} className="w-6 h-6">
+                  <Link
+                    href={valueIcon?.socialUrl}
+                    className="w-full h-full fill-white"
+                  >
+                    <IconContainer iconName={valueIcon?.socialIcon?.name} />
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         ) : (
-          <div className="mt-2">
-            <BodyText>{contactOption.value}</BodyText>
-          </div>
+          <div className="mt-2">{<BodyText className="break-all">{value}</BodyText>}</div>
         )}
       </div>
     </>

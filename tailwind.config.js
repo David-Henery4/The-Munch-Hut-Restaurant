@@ -37,6 +37,8 @@ module.exports = {
       flexibleMedium: "repeat(auto-fit, minmax(125px, 1fr))",
       teamGridColsTab: "1fr 1fr",
       teamGridColsLap: "repeat(4, 1fr)",
+      contactOptionTab: "repeat(3, 1fr)",
+      contactOptionLap: "auto",
       drinksContainerTab: "1fr 30%",
       drinksCardsContainerTab: "repeat(auto-fit, minmax(250px, 1fr))",
     },

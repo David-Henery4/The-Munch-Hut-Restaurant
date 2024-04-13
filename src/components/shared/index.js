@@ -10,6 +10,7 @@ import FifthHeader from "./FifthHeader";
 import Cta from "./Cta";
 import PrimaryHeader from "./PrimaryHeader";
 import Sidebar from "./Sidebar";
+import IconContainer from "./IconContainer";
 
 export {
   Navbar,
@@ -23,5 +24,6 @@ export {
   Cta,
   FifthHeader,
   PrimaryHeader,
-  Sidebar
+  Sidebar,
+  IconContainer
 }

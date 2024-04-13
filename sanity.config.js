@@ -7,6 +7,7 @@ import { visionTool } from "@sanity/vision";
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { unsplashImageAsset } from "sanity-plugin-asset-source-unsplash";
+import { iconify } from "sanity-plugin-iconify";
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import { apiVersion, dataset, projectId } from "./sanity/env";
@@ -52,6 +53,13 @@ export default defineConfig({
                   .documentId("aboutUsHomePage")
               ),
             S.divider(),
+            S.listItem()
+              .title("Contact Information")
+              .child(
+                S.document()
+                  .schemaType("contactInformation")
+                  .documentId("contactInformation")
+              ),
             ...S.documentTypeListItems().filter(
               (listItem) =>
                 ![
@@ -60,6 +68,7 @@ export default defineConfig({
                   "weeklySpecial",
                   "homeMenuDescription",
                   "aboutUsHomePage",
+                  "contactInformation",
                 ].includes(listItem.getId())
             ),
           ]),
@@ -68,5 +77,6 @@ export default defineConfig({
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
     unsplashImageAsset(),
+    iconify(),
   ],
 });
