@@ -54,6 +54,23 @@ export default defineConfig({
               ),
             S.divider(),
             S.listItem()
+              .title("About Page")
+              .child(
+                S.list()
+                  .title("About Page Documents")
+                  .items([
+                    S.documentTypeListItem("theTeam"),
+                    S.listItem()
+                      .title("Story")
+                      .child(
+                        S.document()
+                          .schemaType("ourStory")
+                          .documentId("ourStory")
+                      ),
+                  ])
+              ),
+            S.divider(),
+            S.listItem()
               .title("Contact Information")
               .child(
                 S.document()
@@ -69,6 +86,8 @@ export default defineConfig({
                   "homeMenuDescription",
                   "aboutUsHomePage",
                   "contactInformation",
+                  "ourStory",
+                  "theTeam",
                 ].includes(listItem.getId())
             ),
           ]),

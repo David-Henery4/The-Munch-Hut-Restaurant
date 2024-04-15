@@ -1,5 +1,5 @@
 import ContactOptionCard from "./contactOptionCard.jsx/ContactOptionCard";
-import placeholderContactList from "@/contact-details-list/placeholderContactList";
+// import placeholderContactList from "@/contact-details-list/placeholderContactList";
 import { client } from "../../../../../sanity/lib/client";
 import { revalidateTag } from "next/cache";
 
@@ -10,10 +10,6 @@ const ContactOptionsList = async ({isBookingPage= false}) => {
     { next: { tags: ["contactInformationData"] } }
   );
   revalidateTag("contactInformationData");
-  //
-  console.log(contactInformationData)
-  const contactInfoRay = Object.entries(contactInformationData);
-  console.log(contactInfoRay)
   //
   return (
     <ul

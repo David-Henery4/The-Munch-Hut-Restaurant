@@ -1,29 +1,28 @@
 import { PrimaryHeader, BodyText } from "@/components/shared";
+import { PortableText } from "@portabletext/react";
 
-const StoryText = () => {
+const components = {
+  types: {
+    block: ({value}) => {
+      return value.children.map((item) => {
+        return <BodyText key={item._key}>{item.text}</BodyText>;
+      })
+    },
+  }
+};
+
+const StoryText = ({storyTitle, storyBody}) => {
+  //
   return (
     <div className="w-full">
       <div>
         <PrimaryHeader>
+          {/* {storyTitle} */}
           Our <span className="text-red">Story</span>
         </PrimaryHeader>
       </div>
       <div className="mt-8 grid gap-6 max-w-[472px] mx-auto desk:mt-12">
-        <BodyText>
-          Lorem ipsum dolor sit amet consectetur. Vitae orci laoreet risus
-          convallis diam fringilla non eget fermentum. Luctus adipiscing nibh
-          non libero eu suscipit lacus pretium. Purus ut gravida sagittis sit
-          morbi quis egestas sit. Purus mauris nunc ut vitae nunc velit
-          dignissim congue integer. Congue facilisi euismod facilisis in sit
-          tellus mauris. Hac urna quam sed amet lectus sed. Quis dui est duis
-          quis mattis urna in sed.
-        </BodyText>
-        <BodyText>
-          Id elementum dui pellentesque aliquam. Vel turpis interdum
-          pellentesque molestie dictum pretium nibh vel in. Mi cursus nunc
-          consectetur et quis. Mattis varius amet vel pellentesque congue
-          malesuada sed nunc. Sem ornare lorem duis ornare.
-        </BodyText>
+        <PortableText value={storyBody} components={components} />
       </div>
     </div>
   );

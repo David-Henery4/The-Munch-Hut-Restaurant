@@ -9,6 +9,8 @@ import specials from "./schemas/specials";
 import homeMenuDescription from "./schemas/homeMenuDescription";
 import offers from "./schemas/offers";
 import contact from "./schemas/contact";
+import team from "./schemas/team";
+import story from "./schemas/story";
 
 export const schema = {
   types: [
@@ -22,6 +24,8 @@ export const schema = {
     food,
     specials,
     offers,
-    contact
+    contact,
+    story,
+    team
   ],
 };
