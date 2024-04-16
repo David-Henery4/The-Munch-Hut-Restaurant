@@ -2,30 +2,37 @@ import { PrimaryHeader, BodyText } from "@/components/shared";
 import { PortableText } from "@portabletext/react";
 
 const components = {
-  types: {
-    block: ({value}) => {
-      return value.children.map((item) => {
-        return <BodyText key={item._key}>{item.text}</BodyText>;
-      })
+  types: {},
+  block: {
+    h1: ({ value, children }) => {
+      return (
+        <div className="mb-8">
+          <PrimaryHeader>{children}</PrimaryHeader>
+        </div>
+      );
     },
-  }
+    normal: ({ value, index, children, isInline }) => {
+      return (
+        <div>
+          <BodyText>{children}</BodyText>
+        </div>
+      );
+    },
+  },
+  marks: {
+    highlight: ({ children, value }) => {
+      return <span className="text-red">{children}</span>;
+    },
+  },
 };
 
-const StoryText = ({storyTitle, storyBody}) => {
+const StoryText = ({ storyBody }) => {
   //
   return (
-    <div className="w-full">
-      <div>
-        <PrimaryHeader>
-          {/* {storyTitle} */}
-          Our <span className="text-red">Story</span>
-        </PrimaryHeader>
-      </div>
-      <div className="mt-8 grid gap-6 max-w-[472px] mx-auto desk:mt-12">
+      <div className="w-full grid gap-6 max-w-[472px] mx-auto desk:mt-12">
         <PortableText value={storyBody} components={components} />
       </div>
-    </div>
   );
-}
+};
 
-export default StoryText
+export default StoryText;
