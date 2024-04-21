@@ -11,6 +11,7 @@ import offers from "./schemas/offers";
 import contact from "./schemas/contact";
 import team from "./schemas/team";
 import story from "./schemas/story";
+import siteThemeColours from "./schemas/siteThemeColours";
 
 export const schema = {
   types: [
@@ -26,6 +27,7 @@ export const schema = {
     offers,
     contact,
     story,
-    team
+    team,
+    siteThemeColours
   ],
 };

@@ -20,8 +20,13 @@ const components = {
     },
   },
   marks: {
-    highlight: ({ children, value }) => {
-      return <span className="text-red">{children}</span>;
+    textColor: ({ value, children }) => {
+      return <span style={{ color: `${value?.value}` }}>{children}</span>;
+    },
+    highlightColor: ({ value, children }) => {
+      return (
+        <span style={{ backgroundColor: `${value?.value}` }}>{children}</span>
+      );
     },
   },
 };
@@ -29,9 +34,12 @@ const components = {
 const StoryText = ({ storyBody }) => {
   //
   return (
-      <div className="w-full grid gap-6 max-w-[472px] mx-auto desk:mt-12">
-        <PortableText value={storyBody} components={components} />
-      </div>
+    <div className="w-full grid gap-6 max-w-[472px] mx-auto desk:mt-12">
+      <PortableText
+        value={storyBody}
+        components={components}
+      />
+    </div>
   );
 };
 

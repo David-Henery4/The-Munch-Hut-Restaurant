@@ -26,6 +26,7 @@
     "sanity": "^3.37.2",
     "sanity-plugin-asset-source-unsplash": "^2.0.1",
     "sanity-plugin-iconify": "^1.1.2",
+    "sanity-plugin-simpler-color-input": "^2.2.1",
     "styled-components": "^6.1.8",
     "tailwind-merge": "^2.2.2"
   },

@@ -1,4 +1,6 @@
-import { defineField, defineType, defineArrayMember } from "sanity"
+import { defineField, defineType } from "sanity";
+import { SimplerColorInput } from "@/components/color-input/ColourInput";
+import { TextColorAnnotation } from "@/components/color-input/TextColourAnnotation"
 
 const story = defineType({
   title: "Our Story",
@@ -18,15 +20,36 @@ const story = defineType({
         {
           type: "block",
           marks: {
-            decorators: [
+            annotations: [
               {
-                title: "Highlight",
-                value: "highlight",
-                component: (props) => (
-                  <span style={{ backgroundColor: "#0f0" }}>
-                    {props.children}
-                  </span>
-                ),
+                type: "textColor",
+                options: {
+                  colorList: [
+                    {
+                      label: "Light",
+                      value: "#ffffff",
+                    },
+                    { label: "Dark", value: "#333333" },
+                    { label: "Brand", value: "#ca786d" },
+                    { label: "Accent", value: "#626754" },
+                    { label: "Custom...", value: "custom" },
+                  ],
+                },
+                components: {
+                  input: SimplerColorInput,
+                  annotation: TextColorAnnotation
+                }
+              },
+              { type: "highlightColor" },
+              {
+                type: "reference",
+                name: "textColorSelect",
+                title: "Text Color Select",
+                to: [
+                  {
+                    type: "siteTheme",
+                  },
+                ],
               },
             ],
           },
@@ -41,4 +64,4 @@ const story = defineType({
   ],
 });
 
-export default story
+export default story;

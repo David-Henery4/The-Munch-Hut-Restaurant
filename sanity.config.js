@@ -8,6 +8,7 @@ import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { unsplashImageAsset } from "sanity-plugin-asset-source-unsplash";
 import { iconify } from "sanity-plugin-iconify";
+import { simplerColorInput } from "sanity-plugin-simpler-color-input";
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import { apiVersion, dataset, projectId } from "./sanity/env";
@@ -77,6 +78,13 @@ export default defineConfig({
                   .schemaType("contactInformation")
                   .documentId("contactInformation")
               ),
+            S.divider(),
+            S.listItem()
+              .title("Site Theme")
+              .child(
+                S.document().schemaType("siteTheme").documentId("siteTheme")
+              ),
+            S.divider(),
             ...S.documentTypeListItems().filter(
               (listItem) =>
                 ![
@@ -88,6 +96,7 @@ export default defineConfig({
                   "contactInformation",
                   "ourStory",
                   "theTeam",
+                  "siteTheme",
                 ].includes(listItem.getId())
             ),
           ]),
@@ -97,5 +106,15 @@ export default defineConfig({
     visionTool({ defaultApiVersion: apiVersion }),
     unsplashImageAsset(),
     iconify(),
+    simplerColorInput({
+      defaultColorFormat: "rgba",
+      defaultColorList: [
+        { label: "Light", value: "#ffffff" },
+        { label: "Dark", value: "#333333" },
+        { label: "Brand", value: "#ca786d" },
+        { label: "Accent", value: "#626754" },
+        { label: "Custom...", value: "custom" },
+      ],
+    }),
   ],
 });
