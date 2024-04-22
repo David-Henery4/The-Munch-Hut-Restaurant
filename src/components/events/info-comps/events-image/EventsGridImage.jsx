@@ -1,13 +1,14 @@
 import Image from "next/image";
+import { urlForImage } from "../../../../../sanity/lib/image";
 
-const EventsGridImage = ({ eventTitle }) => {
+const EventsGridImage = ({ eventName, eventImage }) => {
   return (
     <div className="relative group hover:after:absolute hover:after:w-full hover:after:h-full hover:after:top-0 hover:after:left-0 hover:after:bg-gold/50">
       <h3 className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden group-hover:block font-pompiere text-4xl">
-        {eventTitle}
+        {eventName}
       </h3>
       <Image
-        src="/images/events/events-grid-1.png"
+        src={urlForImage(eventImage)}
         alt="Event"
         width={1400}
         height={1400}

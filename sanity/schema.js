@@ -12,6 +12,7 @@ import contact from "./schemas/contact";
 import team from "./schemas/team";
 import story from "./schemas/story";
 import siteThemeColours from "./schemas/siteThemeColours";
+import events from "./schemas/events";
 
 export const schema = {
   types: [
@@ -28,6 +29,7 @@ export const schema = {
     contact,
     story,
     team,
-    siteThemeColours
+    siteThemeColours,
+    events
   ],
 };

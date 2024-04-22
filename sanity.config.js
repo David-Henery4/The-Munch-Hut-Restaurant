@@ -72,6 +72,13 @@ export default defineConfig({
               ),
             S.divider(),
             S.listItem()
+              .title("Events")
+              .child(
+                S.document()
+                  .schemaType("events")
+                  .documentId("events")
+              ),
+            S.listItem()
               .title("Contact Information")
               .child(
                 S.document()
@@ -97,6 +104,7 @@ export default defineConfig({
                   "ourStory",
                   "theTeam",
                   "siteTheme",
+                  "events"
                 ].includes(listItem.getId())
             ),
           ]),
