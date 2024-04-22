@@ -51,13 +51,16 @@ const rightCol = (n) => {
   }
 };
 
-const GalleryContainer = () => {
+const GalleryContainer = ({ galleryImages }) => {
+  //
   return (
     <div className="w-full mt-12 grid gap-6 XtraSmTab:grid-cols-basic12">
-      {tempImgRay.map((img, i) => {
+      {galleryImages.map((img, i) => {
         const isEven = (i + 1) % 2 === 0;
         if (!isEven) {
-          return <GalleryImage key={i} imgSrc={img} className={leftCol(i + 1)} />;
+          return (
+            <GalleryImage key={i} imgSrc={img} className={leftCol(i + 1)} />
+          );
         }
         return <GalleryImage key={i} imgSrc={img} className={rightCol(i)} />;
       })}

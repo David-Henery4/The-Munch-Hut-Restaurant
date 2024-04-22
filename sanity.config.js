@@ -73,10 +73,13 @@ export default defineConfig({
             S.divider(),
             S.listItem()
               .title("Events")
+              .child(S.document().schemaType("events").documentId("events")),
+            S.listItem()
+              .title("Gallery Content")
               .child(
                 S.document()
-                  .schemaType("events")
-                  .documentId("events")
+                  .schemaType("galleryContent")
+                  .documentId("galleryContent")
               ),
             S.listItem()
               .title("Contact Information")
@@ -104,7 +107,8 @@ export default defineConfig({
                   "ourStory",
                   "theTeam",
                   "siteTheme",
-                  "events"
+                  "events",
+                  "galleryContent",
                 ].includes(listItem.getId())
             ),
           ]),

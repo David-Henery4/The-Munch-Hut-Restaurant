@@ -13,6 +13,7 @@ import team from "./schemas/team";
 import story from "./schemas/story";
 import siteThemeColours from "./schemas/siteThemeColours";
 import events from "./schemas/events";
+import gallery from "./schemas/gallery";
 
 export const schema = {
   types: [
@@ -30,6 +31,7 @@ export const schema = {
     story,
     team,
     siteThemeColours,
-    events
+    events,
+    gallery
   ],
 };
