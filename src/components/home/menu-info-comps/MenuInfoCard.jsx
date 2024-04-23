@@ -14,7 +14,6 @@ const MenuInfoCard = async () => {
   );
   revalidateTag("cardInfoData");
   //
-  console.log(cardInfoData)
   return (
     <div className="col-start-2 col-end-12 row-start-2 row-end-11 max-w-[350px] mx-auto  text-center relative z-10 mt-16 px-4 py-8 rounded-2xl bg-black/80 lgMob:mt-24 lgMob:px-6 smTab:mx-0 smLap:max-w-[540px] smLap:mt-32">
       <ThirdHeader>

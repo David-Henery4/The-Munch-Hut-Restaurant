@@ -8,7 +8,6 @@ const OffersContainer = async () => {
     tags: ["offersList"]
   }})
   revalidateTag("offersList")
-  console.log(offersList)
   //
   return (
     <div className="w-full mt-20 grid gap-4 max-w-[2560px] mx-auto">

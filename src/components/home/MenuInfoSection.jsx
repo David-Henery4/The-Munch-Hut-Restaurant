@@ -1,4 +1,11 @@
 import { MenuInfoCard, Slider } from "./menu-info-comps";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../shared/shad-comps/CarouselComps";
 
 const MenuInfoSection = () => {
   return (
@@ -6,7 +13,7 @@ const MenuInfoSection = () => {
       <div className="w-full col-start-2 col-end-12 max-w-[1160px] mx-auto">
         <MenuInfoCard />
         <Slider />
-      </div>
+      </div>      
     </section>
   );
 };
