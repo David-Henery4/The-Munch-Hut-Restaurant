@@ -256,7 +256,7 @@ CarouselNext.displayName = "CarouselNext";
 
 const CarouselDots = React.forwardRef(
   ({ className, variant = "outline", size = "icon", ...props }, ref) => {
-    const { orientation, onDotButtonClick, scrollSnaps, selectedIndex } =
+    const { onDotButtonClick, scrollSnaps, selectedIndex } =
       useCarousel();
 
     return (
@@ -270,9 +270,6 @@ const CarouselDots = React.forwardRef(
               size={size}
               className={cn(
                 "h-8 w-8 rounded-full",
-                orientation === "horizontal"
-                  ? "-right-12 top-1/2 -translate-y-1/2"
-                  : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
                 className
               )}
               onClick={() => onDotButtonClick(index)}

@@ -88,6 +88,13 @@ export default defineConfig({
                   .schemaType("contactInformation")
                   .documentId("contactInformation")
               ),
+            S.listItem()
+              .title("Location Information")
+              .child(
+                S.document()
+                  .schemaType("locationInformation")
+                  .documentId("locationInformation")
+              ),
             S.divider(),
             S.listItem()
               .title("Site Theme")
@@ -109,6 +116,7 @@ export default defineConfig({
                   "siteTheme",
                   "events",
                   "galleryContent",
+                  "locationInformation",
                 ].includes(listItem.getId())
             ),
           ]),

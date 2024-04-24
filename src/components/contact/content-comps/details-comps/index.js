@@ -1,7 +1,7 @@
 import ContactOptionsList from "./ContactOptionsList";
-import MapContainer from "./MapContainer";
+import MapWrapper from "./MapWrapper";
 
 export {
   ContactOptionsList,
-  MapContainer
+  MapWrapper
 }

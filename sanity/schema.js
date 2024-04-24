@@ -14,6 +14,7 @@ import story from "./schemas/story";
 import siteThemeColours from "./schemas/siteThemeColours";
 import events from "./schemas/events";
 import gallery from "./schemas/gallery";
+import location from "./schemas/location";
 
 export const schema = {
   types: [
@@ -32,6 +33,7 @@ export const schema = {
     team,
     siteThemeColours,
     events,
-    gallery
+    gallery,
+    location,
   ],
 };

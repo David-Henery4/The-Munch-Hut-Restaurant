@@ -17,6 +17,14 @@ const homeMenuDescription = defineType({
       name: "description",
       type: "text"
     }),
+    defineField({
+      title: "Menu Slider Images",
+      name: "menuSliderImages",
+      type: "array",
+      of: [
+        {type: "image"}
+      ]
+    }),
   ]
 })
 
