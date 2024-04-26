@@ -1,20 +1,55 @@
 "use client";
-
+import { useFormState } from "react-dom";
+import { useOptimistic } from "react";
 import { FormInput, FormSubmitBtn } from "./form-comps";
+import handleBookingSubmit from "@/actions/bookingSubmit";
+
+const initialState = {
+  fullName: "",
+  amountOfPeople: 0,
+  availableDate: "",
+  time: 0,
+  email: "",
+  phoneNumber: 0,
+  message: ""
+};
 
 const Form = () => {
+  const [state, formAction] = useFormState(handleBookingSubmit, initialState);
+  const [optimistic, addOptimistic] = useOptimistic(
+    state,
+    (currentState, optimisticValue) => {
+      console.log(currentState)
+      console.log(optimisticValue)
+      return {
+        ...currentState,
+        BookingStatus: optimisticValue
+      }
+    }
+  );
+  //
+  const handleOptiUpdates = (formData) => {
+    addOptimistic("Booking Request")
+    formAction(formData)
+  }
+  //
+  console.log(optimistic)
   // Hard coded props are temp
+  // console.log(state)
   return (
-    <form className="w-full grid gap-4 mt-6 XtraSmTab:grid-cols-teamGridColsTab">
-      <FormInput name={"full-name"} id={"full-name"} label={"Full name"} />
+    <form
+      className="w-full grid gap-4 mt-6 XtraSmTab:grid-cols-teamGridColsTab"
+      action={handleOptiUpdates}
+    >
+      <FormInput name={"fullName"} id={"fullName"} label={"Full name"} />
       <FormInput
-        name={"amount-of-people"}
-        id={"amount-of-people"}
+        name={"amountOfPeople"}
+        id={"amountOfPeople"}
         label={"Amount of people"}
       />
       <FormInput
-        name={"available-date"}
-        id={"available-date"}
+        name={"availableDate"}
+        id={"availableDate"}
         label={"Available Date"}
       />
       <FormInput name={"time"} id={"time"} label={"Time"} />
@@ -25,8 +60,8 @@ const Form = () => {
         label={"Email"}
       />
       <FormInput
-        name={"phone-number"}
-        id={"phone-number"}
+        name={"phoneNumber"}
+        id={"phoneNumber"}
         label={"Phone Number"}
         className="XtraSmTab:col-start-1 XtraSmTab:col-end-2"
       />
