@@ -41,28 +41,28 @@ const Form = () => {
       className="w-full grid gap-4 mt-6 XtraSmTab:grid-cols-teamGridColsTab"
       action={handleOptiUpdates}
     >
-      <FormInput name={"fullName"} id={"fullName"} label={"Full name"} />
+      <FormInput name={"fullName"} id={"fullName"} label={"Full name*"} />
       <FormInput
         name={"amountOfPeople"}
         id={"amountOfPeople"}
-        label={"Amount of people"}
+        label={"Amount of people*"}
       />
       <FormInput
         name={"availableDate"}
         id={"availableDate"}
-        label={"Available Date"}
+        label={"Available Date*"}
       />
-      <FormInput name={"time"} id={"time"} label={"Time"} />
+      <FormInput name={"time"} id={"time"} label={"Time*"} />
       <FormInput
         className="XtraSmTab:row-start-4 XtraSmTab:row-end-5"
         name={"email"}
         id={"email"}
-        label={"Email"}
+        label={"Email*"}
       />
       <FormInput
         name={"phoneNumber"}
         id={"phoneNumber"}
-        label={"Phone Number"}
+        label={"Phone Number*"}
         className="XtraSmTab:col-start-1 XtraSmTab:col-end-2"
       />
       <FormInput
