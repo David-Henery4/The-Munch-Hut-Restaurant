@@ -1,12 +1,12 @@
 
 
-const FormInput = ({label, id, name, value, isMessage = false, className = ""}) => {
-
+const FormInput = ({label, id, name, value, isMessage = false, className = "", isError = null}) => {
+  console.log(isError)
   //
   if (isMessage){
     return (
       <div className="w-full XtraSmTab:flex XtraSmTab:flex-col XtraSmTab:items-start XtraSmTab:row-span-2 XtraSmTab:col-start-2 XtraSmTab:col-end-3">
-        <label htmlFor={id} className="">
+        <label htmlFor={id}>
           {label}
         </label>
         <textarea
@@ -19,7 +19,10 @@ const FormInput = ({label, id, name, value, isMessage = false, className = ""}) 
   }
   return (
     <div className={`w-full ${className}`}>
-      <label htmlFor={id} className="">
+      <label
+        htmlFor={id}
+        className={`${isError && isError.isError && "text-red"}`}
+      >
         {label}
       </label>
       <input
