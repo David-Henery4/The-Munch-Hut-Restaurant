@@ -13,6 +13,7 @@ import LocationPinIcon from "./location-pin-icon.svg"
 import PhoneIcon from "./phone-icon.svg"
 import GridIcon from "./grid-icon.svg"
 import noImageIcon from "./no-image-icon.png";
+import CalendarIcon from "./calendar-icon.svg"
 
 export {
   BurgerIcon,
@@ -29,6 +30,7 @@ export {
   LocationPinIcon,
   PhoneIcon,
   GridIcon,
+  CalendarIcon,
   // Image
   noImageIcon
 };

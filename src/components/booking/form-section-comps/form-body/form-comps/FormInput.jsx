@@ -21,7 +21,6 @@ const FormInput = ({label, id, name, value, isMessage = false, className = "", i
     <div className={`w-full ${className}`}>
       <label
         htmlFor={id}
-        className={`${isError && isError.isError && "text-red"}`}
       >
         {label}
       </label>
@@ -30,7 +29,8 @@ const FormInput = ({label, id, name, value, isMessage = false, className = "", i
         name={name}
         className="w-full p-3 mt-2 rounded-md bg-black/0 outline-none border border-white/50"
         type="text"
-      />
+        />
+        {isError.isError && <p className="text-sm text-red mt-2">{`${isError?.errorMsg[0]}*`}</p>}
     </div>
   );
 }

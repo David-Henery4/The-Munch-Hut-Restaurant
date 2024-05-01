@@ -32,3 +32,26 @@ input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
 }
+
+
+/* For date picker */
+.react-datepicker__input-container{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  outline: none;
+  border: 1px solid rgb(255 255 255 / 0.5);
+  margin-top: 0.5rem;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.react-datepicker__calendar-icon{
+  position: relative !important;
+  padding: 0px !important;
+}
+
+.react-datepicker__view-calendar-icon input{
+  padding: 0px !important;
+}

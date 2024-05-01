@@ -2,39 +2,39 @@ const formInputs = [
   {
     id: "fullName",
     name: "fullName",
-    label: "Full Name*",
+    label: "Full Name",
   },
   {
     id: "amountOfPeople",
     name: "amountOfPeople",
-    label: "Amount of people*",
+    label: "Amount of people",
   },
   {
     id: "availableDate",
     name: "availableDate",
-    label: "Available Date*",
+    label: "Available Date",
   },
   {
     id: "time",
     name: "time",
-    label: "Time*",
+    label: "Time",
   },
   {
     id: "email",
     name: "email",
-    label: "Email*",
+    label: "Email",
     className: "XtraSmTab:row-start-4 XtraSmTab:row-end-5"
   },
   {
     id: "phoneNumber",
     name: "phoneNumber",
-    label: "Phone Number*",
+    label: "Phone Number",
     className:"XtraSmTab:col-start-1 XtraSmTab:col-end-2"
   },
   {
     id: "message",
     name: "message",
-    label: "Message*",
+    label: "Message",
     isMessage: true,
   },
 ];
