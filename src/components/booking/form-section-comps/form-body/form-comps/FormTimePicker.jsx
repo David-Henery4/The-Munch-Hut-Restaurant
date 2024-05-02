@@ -1,32 +1,34 @@
 import DatePicker from "react-datepicker";
-import { CalendarIcon } from "../../../../../../public/assets";
 import "react-datepicker/dist/react-datepicker.css";
 
-const FormDatePicker = ({
-  setStartDate,
-  startDate,
+
+const FormTimePicker = ({
   isError = null,
+  setStartTime,
+  startTime,
   name,
   id,
   label,
 }) => {
+  console.log(name, id, label)
   //
   return (
     <div className="w-full">
       <label htmlFor={name}>{label}</label>
       <DatePicker
-        selected={startDate}
-        onChange={(date) => setStartDate(date)}
+        selected={startTime}
+        onChange={(date) => setStartTime(date)}
         name={name}
         id={id}
-        className="w-full bg-black/0 outline-none flex-1"
-        toggleCalendarOnIconClick
-        showIcon
+        className="w-full bg-black/0 outline-none"
         closeOnScroll={true}
-        icon={<CalendarIcon />}
-        minDate={new Date()}
         wrapperClassName="w-full"
-        dateFormat="dd-MM-yyyy"
+        showTimeSelect
+        showTimeSelectOnly
+        timeIntervals={15}
+        timeCaption="Time"
+        timeFormat="HH:mm:ss"
+        dateFormat="HH:mm:ss"
       />
       {isError.isError && (
         <p className="text-sm text-red mt-2">{`${isError?.errorMsg[0]}*`}</p>
@@ -35,4 +37,4 @@ const FormDatePicker = ({
   );
 };
 
-export default FormDatePicker;
+export default FormTimePicker;

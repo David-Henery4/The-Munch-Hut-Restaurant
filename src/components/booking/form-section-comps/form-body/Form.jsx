@@ -1,6 +1,11 @@
 "use client";
 import { useFormState } from "react-dom";
-import { FormInput, FormSubmitBtn, FormDatePicker } from "./form-comps";
+import {
+  FormInput,
+  FormSubmitBtn,
+  FormDatePicker,
+  FormTimePicker,
+} from "./form-comps";
 import handleBookingSubmit from "@/actions/bookingSubmit";
 import formInputs from "@/form-data/formInputs";
 import { useEffect, useState } from "react";
@@ -18,6 +23,7 @@ const initialState = {
 const Form = () => {
   const [state, formAction] = useFormState(handleBookingSubmit, initialState);
   const [startDate, setStartDate] = useState(new Date());
+  const [startTime, setStartTime] = useState(new Date());
   //
   useEffect(() => {
     console.log(state);
@@ -43,24 +49,42 @@ const Form = () => {
           });
         }
         //
-        if (inputData?.name !== "availableDate") {
+        if (inputData?.name === "time") {
           return (
-            <FormInput
+            <FormTimePicker
               key={inputData?.id}
               name={inputData?.name}
               id={inputData?.id}
               label={inputData?.label}
-              isMessage={inputData?.isMessage}
-              className={inputData?.className}
+              startTime={startTime}
+              setStartTime={setStartTime}
               isError={{ isError, errorMsg }}
             />
           );
         }
+        if (inputData?.name === "availableDate") {
+          return (
+            <FormDatePicker
+              key={inputData?.id}
+              name={inputData?.name}
+              id={inputData?.id}
+              label={inputData?.label}
+              startDate={startDate}
+              setStartDate={setStartDate}
+              isError={{ isError, errorMsg }}
+            />
+          );
+        }
+        //
         return (
-          <FormDatePicker
+          <FormInput
             key={inputData?.id}
-            startDate={startDate}
-            setStartDate={setStartDate}
+            name={inputData?.name}
+            id={inputData?.id}
+            label={inputData?.label}
+            isMessage={inputData?.isMessage}
+            className={inputData?.className}
+            isError={{ isError, errorMsg }}
           />
         );
       })}

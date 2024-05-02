@@ -13,10 +13,19 @@ const handleBookingSubmit = async (currentState, formData) => {
       };
     }
   }
-  console.log(rawData)
+  // const formattedDate = new Intl.DateTimeFormat("en-GB", {
+  //   weekday: "long",
+  //   month: "long",
+  //   day: "2-digit",
+  //   year: "2-digit",
+  // }).format(rawData?.availableDate);
+  // console.log(formattedDate)
+  const [date, month, year] = rawData?.availableDate.split("-")
+  const formattedAvailableDate = `${month}-${date}-${year}`;
   const results = BookingForm.safeParse({
     ...rawData,
-    time: { time: rawData?.time, date: rawData?.availableDate },
+    availableDate: formattedAvailableDate,
+    time: { time: rawData?.time, date: formattedAvailableDate },
   });
   if (!results.success) {
     const errorValues = results.error.flatten();

@@ -30,9 +30,10 @@ export const BookingForm = z.object({
     .min(1),
   //
   availableDate: z.coerce.date().transform((val, ctx) => {
-    console.log(val)
-    const yesterday = +new Date(new Date().setDate(new Date().getDate() - 1));
-    const requestedDate = +val;
+    const yesterday = +new Date(new Date().setHours(0, 59, 59, 0));
+    const requestedDate = +new Date(
+      new Date(val).setHours(1, 0, 0, 0)
+    );
     //
     if (requestedDate <= yesterday) {
       ctx.addIssue({ message: "Can't be in the past!" });
@@ -62,8 +63,10 @@ export const BookingForm = z.object({
       givenTime.setHours(Number(hours), Number(minutes), Number(seconds), 0);
       const timeDifference = givenTime.getTime() - new Date().getTime();
       //
-      const yesterday = +new Date(new Date().setDate(new Date().getDate() - 1));
-      const requestedDate = +val.date;
+      const yesterday = +new Date(new Date().setHours(0, 59, 59, 0));
+      const requestedDate = +new Date(
+        new Date(val.date).setHours(1, 0, 0, 0)
+      );
       //
       if (requestedDate <= yesterday) {
         ctx.addIssue({ message: "Can't be in the past!" });
