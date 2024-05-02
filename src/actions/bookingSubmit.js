@@ -13,13 +13,7 @@ const handleBookingSubmit = async (currentState, formData) => {
       };
     }
   }
-  // const formattedDate = new Intl.DateTimeFormat("en-GB", {
-  //   weekday: "long",
-  //   month: "long",
-  //   day: "2-digit",
-  //   year: "2-digit",
-  // }).format(rawData?.availableDate);
-  // console.log(formattedDate)
+  //
   const [date, month, year] = rawData?.availableDate.split("-")
   const formattedAvailableDate = `${month}-${date}-${year}`;
   const results = BookingForm.safeParse({

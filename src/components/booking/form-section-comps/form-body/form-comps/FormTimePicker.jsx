@@ -10,7 +10,7 @@ const FormTimePicker = ({
   id,
   label,
 }) => {
-  console.log(name, id, label)
+  // NEED TO SET MIN & MAX TIMES FOR OPENING TIMES
   //
   return (
     <div className="w-full">

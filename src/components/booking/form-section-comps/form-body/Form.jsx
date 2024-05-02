@@ -27,8 +27,8 @@ const Form = () => {
   //
   useEffect(() => {
     console.log(state);
-    console.log(startDate);
-  }, [state, startDate]);
+    if (state?.fieldErrors) return
+  }, [state]);
   //
   return (
     <form
