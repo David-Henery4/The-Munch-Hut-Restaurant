@@ -8,7 +8,8 @@ import {
 } from "./form-comps";
 import handleBookingSubmit from "@/actions/bookingSubmit";
 import formInputs from "@/form-data/formInputs";
-import {useState } from "react";
+import {useEffect, useState } from "react";
+import { BodyText } from "@/components/shared";
 
 const initialState = {
   fullName: "",
@@ -22,6 +23,7 @@ const initialState = {
 
 const Form = () => {
   const [state, formAction] = useFormState(handleBookingSubmit, initialState);
+  const [isBookingCompleted, setIsBookingCompleted] = useState(false);
   const [startDate, setStartDate] = useState(new Date());
   const [startTime, setStartTime] = useState(
     new Date(
@@ -33,6 +35,18 @@ const Form = () => {
       )
     )
   );
+  //
+  const handleDisplayAfterBooking = () => {
+    if (state?.success) {
+      setIsBookingCompleted(true);
+      return;
+    }
+    setIsBookingCompleted(false);
+  }
+  //
+  useEffect(() => {
+    handleDisplayAfterBooking()
+  },[state])
   //
   return (
     <form
@@ -92,9 +106,21 @@ const Form = () => {
           />
         );
       })}
-      <div className="XtraSmTab:col-start-2 XtraSmTab:col-end-3 XtraSmTab:justify-self-end">
-        <FormSubmitBtn />
-      </div>
+      {isBookingCompleted ? (
+        <div className="XtraSmTab:col-start-1 XtraSmTab:col-end-3 XtraSmTab:justify-self-center">
+          <BodyText>
+            <span className="text-red">Thank you</span> for booking a table at
+            the munch hut!
+          </BodyText>
+          <BodyText>
+            We&apos;ll be in touch to confirm your booking shortly.
+          </BodyText>
+        </div>
+      ) : (
+        <div className="XtraSmTab:col-start-2 XtraSmTab:col-end-3 XtraSmTab:justify-self-end">
+          <FormSubmitBtn />
+        </div>
+      )}
     </form>
   );
 };

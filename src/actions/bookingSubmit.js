@@ -29,7 +29,7 @@ const handleBookingSubmit = async (currentState, formData) => {
   //
   const res = await createBooking(results?.data)
   //
-  return results?.data || null;
+  return results;
 };
 
 export default handleBookingSubmit;
