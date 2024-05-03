@@ -1,5 +1,6 @@
 "use server";
 import { BookingForm } from "@/form-data/validationSchemas";
+import createBooking from "@/booking-api/createBooking";
 
 const handleBookingSubmit = async (currentState, formData) => {
   //
@@ -14,7 +15,7 @@ const handleBookingSubmit = async (currentState, formData) => {
     }
   }
   //
-  const [date, month, year] = rawData?.availableDate.split("-")
+  const [date, month, year] = rawData?.availableDate.split("-");
   const formattedAvailableDate = `${month}-${date}-${year}`;
   const results = BookingForm.safeParse({
     ...rawData,
@@ -26,7 +27,9 @@ const handleBookingSubmit = async (currentState, formData) => {
     return errorValues;
   }
   //
-  return rawData;
+  const res = await createBooking(results?.data)
+  //
+  return results?.data || null;
 };
 
 export default handleBookingSubmit;

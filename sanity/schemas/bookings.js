@@ -9,37 +9,37 @@ const bookings = defineType({
       title: "Full Name",
       name: "fullName",
       type: "string",
-      validation: (Rule) => Rule.required()
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       title: "Amount of people",
       name: "amountOfPeople",
-      type: "string",
-      validation: (Rule) => Rule.required()
+      type: "number",
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       title: "Available Date",
       name: "availableDate",
       type: "string",
-      validation: (Rule) => Rule.required()
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       title: "Time",
       name: "time",
       type: "string",
-      validation: (Rule) => Rule.required()
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       title: "Phone Number",
       name: "phoneNumber",
-      type: "string",
-      validation: (Rule) => Rule.required()
+      type: "number",
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       title: "Email",
       name: "email",
       type: "string",
-      validation: (Rule) => Rule.required()
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       title: "Is Booking Confirmed?",

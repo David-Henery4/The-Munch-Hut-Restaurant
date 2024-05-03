@@ -1,6 +1,5 @@
-import { client } from "../../sanity/lib/client";
 
-const createBooking = async ({ bookingFormData }) => {
+const createBooking = async ( bookingFormData ) => {
   //
   const mutation = {
     mutations: [

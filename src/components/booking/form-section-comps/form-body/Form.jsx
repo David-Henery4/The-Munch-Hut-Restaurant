@@ -8,7 +8,7 @@ import {
 } from "./form-comps";
 import handleBookingSubmit from "@/actions/bookingSubmit";
 import formInputs from "@/form-data/formInputs";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 
 const initialState = {
   fullName: "",
@@ -33,11 +33,6 @@ const Form = () => {
       )
     )
   );
-  //
-  useEffect(() => {
-    console.log(state);
-    if (state?.fieldErrors) return
-  }, [state]);
   //
   return (
     <form
