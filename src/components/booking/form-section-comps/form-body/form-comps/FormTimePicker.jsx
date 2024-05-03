@@ -10,7 +10,6 @@ const FormTimePicker = ({
   id,
   label,
 }) => {
-  // NEED TO SET MIN & MAX TIMES FOR OPENING TIMES
   //
   return (
     <div className="w-full">
@@ -29,6 +28,8 @@ const FormTimePicker = ({
         timeCaption="Time"
         timeFormat="HH:mm:ss"
         dateFormat="HH:mm:ss"
+        minTime={new Date(new Date().setHours(10, 0, 0, 0))}
+        maxTime={new Date(new Date().setHours(23, 0, 0, 0))}
       />
       {isError.isError && (
         <p className="text-sm text-red mt-2">{`${isError?.errorMsg[0]}*`}</p>

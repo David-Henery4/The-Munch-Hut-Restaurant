@@ -23,7 +23,16 @@ const initialState = {
 const Form = () => {
   const [state, formAction] = useFormState(handleBookingSubmit, initialState);
   const [startDate, setStartDate] = useState(new Date());
-  const [startTime, setStartTime] = useState(new Date());
+  const [startTime, setStartTime] = useState(
+    new Date(
+      new Date().setHours(
+        new Date().getHours() + 1,
+        new Date().getMinutes() + 1,
+        0,
+        0
+      )
+    )
+  );
   //
   useEffect(() => {
     console.log(state);
