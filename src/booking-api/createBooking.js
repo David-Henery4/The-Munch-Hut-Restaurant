@@ -23,7 +23,6 @@ const createBooking = async ( bookingFormData ) => {
       body: JSON.stringify(mutation)
     }
   );
-  console.log(updatedData)
   return updatedData
 };
 

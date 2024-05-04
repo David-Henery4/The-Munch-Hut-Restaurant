@@ -1,4 +1,5 @@
-import { GalleryHeader, GallerySection } from "@/components/gallery"
+export const dynamic = "force-static";
+import { GalleryHeader, GallerySection } from "@/components/gallery";
 
 const GalleryPage = () => {
   return (

@@ -1,7 +1,6 @@
 
 
 const FormInput = ({label, id, name, value, isMessage = false, className = "", isError = null}) => {
-  console.log(isError)
   //
   if (isMessage){
     return (

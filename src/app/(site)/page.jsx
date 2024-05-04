@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import {
   Header,
   AboutUs,
@@ -15,7 +16,7 @@ export default function Home() {
       <MenuInfoSection />
       <WeeklySpecials />
       <SpecialOffers />
-      <Cta/>
+      <Cta />
     </main>
   );
 }

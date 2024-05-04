@@ -45,7 +45,8 @@ const Form = () => {
   }
   //
   useEffect(() => {
-    handleDisplayAfterBooking()
+    handleDisplayAfterBooking();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[state])
   //
   return (
