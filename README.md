@@ -32,3 +32,23 @@
   - [Previews & Split Panes (Sanity Blog)](https://www.sanity.io/blog/evolve-authoring-experiences-with-views-and-split-panes)
   - [List Previews (Sanity Docs)](https://www.sanity.io/docs/previews-list-views)
 
+* Validation
+  - [ZOD Validation Docs](https://zod.dev/)
+  - [React-Hook-Form Docs](https://react-hook-form.com/)
+  - [Resolver for using React-hook-form & zod together (very useful)](https://github.com/react-hook-form/resolvers#zod)
+  - [Package for ZOD and sanity schemas (Might not need/use)](https://github.com/saiichihashimoto/sanity-typed/tree/main/packages/zod)
+  - [Package for help using both React forms with zod (Might not need/use)](https://github.com/esamattis/react-zorm)
+
+* React built in hooks for forms
+  - [Form with server action (React Docs)](https://react.dev/reference/react-dom/components/form#handle-form-submission-with-a-server-action)
+  - [useActionState (React Docs)](https://react.dev/reference/react/useActionState)
+  - [useFormStatus (React Docs)](https://react.dev/reference/react-dom/hooks/useFormStatus)
+  - [useOptimistic (React Docs)](https://react.dev/reference/react/useOptimistic)
+  - [useTransition (React Docs)](https://react.dev/reference/react/useTransition)
+
+* React, using ref for re-usable components
+  - [forwardRef (React Docs)](https://react.dev/reference/react/forwardRef#forwardref)
+
+* Using http mutations API with sanity to create CRUD functionality with the studio
+  - [Sanity http mutations Docs ](https://www.sanity.io/docs/http-mutations)
+  - [Sanity http auth docs](https://www.sanity.io/docs/http-auth)

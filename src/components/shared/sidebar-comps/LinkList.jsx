@@ -10,9 +10,11 @@ const LinkList = ({ setIsSidebarOpen }) => {
       {navLinks.map((navLink) => {
         const isActive = navLink.route === pathname
         return (
-          <li key={navLink.id}>
+          <li key={navLink.id} className="hover:scale-105 transition-all">
             <Link
-              className={`text-3xl ${isActive ? "text-red" : "text-white"}`}
+              className={`text-3xl hover:text-redHover ${
+                isActive ? "text-red" : "text-white"
+              }`}
               href={navLink.route}
               onClick={() => setIsSidebarOpen(false)}
             >
