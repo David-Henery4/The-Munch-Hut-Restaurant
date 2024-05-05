@@ -52,3 +52,54 @@
 * Using http mutations API with sanity to create CRUD functionality with the studio
   - [Sanity http mutations Docs ](https://www.sanity.io/docs/http-mutations)
   - [Sanity http auth docs](https://www.sanity.io/docs/http-auth)
+
+* Using Next not-found/404 page with multiple root layouts
+  - [GitHub discussion on the subject](https://github.com/vercel/next.js/discussions/50034)
+
+    ### How to use
+
+    #### File path: App - (site/multiple path) - [...not-found] - page.jsx
+    
+    This triggers the notFound function using a catch all route [...not-found]. Which calls the "notFound.jsx" file below.
+    ```js
+      import { notFound } from "next/  navigation";
+
+      export default function NotFound() {
+      notFound()
+      }
+    ```
+
+    ### not-found file
+
+    #### File path: App - (site/multiple path) - not-found.jsx
+
+    ```js
+      import { BodyText } from "@/components/shared";
+      import { LogoIcon } from "../../../public/assets";
+      import Link from "next/link";
+
+      const NotFound = () => {
+        return (
+          <main>
+            <section>
+              <div>
+                <LogoIcon />
+                <h1>
+                  Woops...
+                </h1>
+              </div>
+              <div>
+                <BodyText>
+                  This seems to be the wrong page!
+                </BodyText>
+                <Link href="/">
+                  Return to Home
+                </Link>
+              </div>
+            </section>
+          </main>
+        );
+      };
+
+      export default NotFound;
+    ```
