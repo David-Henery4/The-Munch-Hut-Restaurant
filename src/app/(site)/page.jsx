@@ -1,4 +1,4 @@
-export const dynamic = "force-static"; // REMOVE ON ALL PAGES
+// export const dynamic = "force-static"; // REMOVE ON ALL PAGES
 // AND CHECK REVALIDATION SPEED WITH THE SERVER-ACTIONS!
 
 import {
