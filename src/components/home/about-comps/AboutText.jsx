@@ -10,7 +10,7 @@ const AboutText = async () => {
       tags: ["aboutData"]
     }
   })
-  // revalidateHomeAboutDataAction()
+  revalidateHomeAboutDataAction()
   //
   return (
     <div className="tab:flex-1 flex flex-col justify-center items-end">
