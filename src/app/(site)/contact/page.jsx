@@ -1,4 +1,4 @@
-export const dynamic = "force-static";
+// export const dynamic = "force-static";
 import { ContactContentSection, ContactHeader } from "@/components/contact";
 import { Cta } from "@/components/shared";
 

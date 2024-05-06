@@ -1,7 +1,6 @@
 import { SecondaryHeader, BodyText } from "@/components/shared";
 import Link from "next/link";
 import { client } from "../../../../sanity/lib/client";
-import { revalidateTag } from "next/cache";
 import revalidateHomeAboutDataAction from "@/actions/revalidateHomeAboutData";
 
 const AboutText = async () => {

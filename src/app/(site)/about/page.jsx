@@ -1,4 +1,4 @@
-export const dynamic = "force-static";
+// export const dynamic = "force-static";
 import { StorySection, TeamSection } from "@/components/about";
 import { Cta } from "@/components/shared";
 
